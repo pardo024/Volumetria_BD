@@ -1,5 +1,7 @@
 let varchartotal = []
 let sumavarchar=0;
+let chartotal = []
+let sumarchar=0;
 let resultados=document.getElementById("resultados");
 let int=document.getElementById("int");
 let float=document.getElementById("float");
@@ -9,6 +11,7 @@ let char=document.getElementById("char");
 let varchar=document.getElementById("varchar");
 let bit=document.getElementById("bit");
 let agregarvarchar=document.getElementById("agregarvarchar");
+let agregarchar=document.getElementById("agregarchar");
 let prueba=document.getElementById("prueba");
 let Variable_Data_Size=0;
 //calculos
@@ -16,7 +19,7 @@ let NumRows=document.getElementById("NumRows");
 let Num_Cols=document.getElementById("Num_Cols");
 let Fixed_Data_Size;
 function Calcular(){
-    Fixed_Data_Size=(int.value*4)+(float.value*8)+(date.value*3)+(time.value*5)+(bit.value*1);
+    Fixed_Data_Size=(int.value*4)+(float.value*8)+(date.value*3)+(time.value*5)+(bit.value*1)+sumarchar;
 let Num_Variable_Cols=varchartotal.length; console.log(Num_Variable_Cols);
 let Max_Var_Size=sumavarchar; console.log(Max_Var_Size);
 let NULL_Bitmap=Math.trunc(2+(parseInt(Num_Cols.value)+7)/8); console.log(NULL_Bitmap);
@@ -149,6 +152,14 @@ function llenarvarchar(){
  sumavarchar+= parseInt(varchar.value);
 }
 
+function llenarchar(){
+   
+  
+  chartotal.push(char.value);  
+  swal("char Agregado", "Puedes continuar agregando valores", "success");
+sumarchar+= parseInt(char.value);
+}
+
 
 
 
@@ -156,3 +167,4 @@ function llenarvarchar(){
 
 prueba.addEventListener("click",Calcular);
 agregarvarchar.addEventListener("click",llenarvarchar);
+agregarchar.addEventListener("click",llenarchar);
