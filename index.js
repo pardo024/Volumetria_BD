@@ -43,6 +43,7 @@ let total=8192*Num_Pages;
 console.log(total);
 console.log(total/1024);
 let totalkb=total/1024;
+let totalcon40=total*1.40;
 resultados.innerHTML=`
 <table class="table">
 
@@ -121,6 +122,14 @@ resultados.innerHTML=`
   <td>Resultado en kb</td>
  
   <td> ${totalkb}</td>
+ 
+</tr>
+
+<tr>
+  <td>Resultado en kb con el 40%</td>
+ 
+  <td> ${totalcon40}</td>
+ 
 </tr>
 
       </table>
