@@ -132,9 +132,9 @@ resultados.innerHTML=`
  
 </tr>
 <tr>
-Total de datos = suma de todos los resultados de las tablas
-Log = 30% del total de datos (TotalDeDatos*0.30) 
-Tamaño Total BD = suma de Total de datos + Log 
+<td>Total de datos = suma de todos los resultados de las tablas</td>
+<td>Log = 30% del total de datos (TotalDeDatos*0.30)</td>
+<td>Tamaño Total BD = suma de Total de datos + Log </td>
 </tr>
 
       </table>
