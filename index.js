@@ -131,6 +131,11 @@ resultados.innerHTML=`
   <td> ${totalcon40}</td>
  
 </tr>
+<tr>
+Total de datos = suma de todos los resultados de las tablas
+Log = 30% del total de datos (TotalDeDatos*0.30) 
+Tamaño Total BD = suma de Total de datos + Log 
+</tr>
 
       </table>
 
